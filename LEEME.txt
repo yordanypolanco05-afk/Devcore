@@ -1,0 +1,22 @@
+DEVCORE PWA — archivos preparados
+
+ARCHIVOS
+- index.html: tu DEVCORE original con metadatos PWA y registro del service worker.
+- manifest.json: nombre, icono y modo de apertura.
+- service-worker.js: caché básica de la aplicación.
+- icon-192.png e icon-512.png: iconos de instalación.
+
+CÓMO PUBLICAR GRATIS CON GITHUB PAGES
+1. Crea/inicia sesión en GitHub.
+2. Crea un repositorio nuevo (por ejemplo: devcore-pwa).
+3. Sube TODOS estos archivos a la raíz del repositorio.
+4. En el repositorio abre Settings > Pages.
+5. En Build and deployment selecciona Deploy from a branch, elige la rama principal (normalmente main) y la carpeta /(root), y guarda.
+6. Espera a que GitHub Pages publique la página HTTPS.
+7. Abre la URL publicada en Chrome para Android.
+8. En el menú de Chrome, elige “Instalar aplicación” o “Añadir a pantalla de inicio” si aparece.
+
+NOTAS
+- No abras index.html como archivo local esperando que se instale como PWA: el service worker requiere HTTPS o localhost.
+- La caché inicial guarda el shell de DEVCORE; funciones que dependan de internet, servicios externos o APIs específicas del navegador pueden seguir necesitando conexión/permisos.
+- No se ha verificado en un dispositivo real ni se garantiza que Chrome muestre la opción de instalación hasta probarlo después de publicar.
